@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class HistoryActivity extends AppCompatActivity {
+public class ActivityHistory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,29 +15,35 @@ public class HistoryActivity extends AppCompatActivity {
         setTitle("PENDING");
 
         LinearLayout layoutPending, layoutUsing, layoutHistory;
-        layoutPending = findViewById(R.id.layout_pending);
-        layoutUsing = findViewById(R.id.layout_using);
-        layoutHistory = findViewById(R.id.layout_history);
 
+        //region Linear layout layout pending
+        layoutPending = findViewById(R.id.layout_pending);
         layoutPending.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setTitle("PENDING");
             }
         });
+        //endregion
 
+        //region Linear layout layut using
+        layoutUsing = findViewById(R.id.layout_using);
         layoutUsing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setTitle("USING");
             }
         });
+        //endregion
 
+        //region Linear layout layout history
+        layoutHistory = findViewById(R.id.layout_history);
         layoutHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setTitle("HISTORY");
             }
         });
+        //endregion
     }
 }

@@ -13,10 +13,10 @@ import android.widget.LinearLayout;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ProfileFragment extends Fragment {
+public class FragmentProfile extends Fragment {
 
 
-    public ProfileFragment() {
+    public FragmentProfile() {
         // Required empty public constructor
     }
 
@@ -26,36 +26,43 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         if (view == null) {
             view = inflater.inflate(R.layout.fragment_profile, container, false);
 
             LinearLayout layoutEditProfile, layoutHistory, layoutFAQ, layoutContactUs;
             layoutEditProfile = view.findViewById(R.id.layout_editprofile);
-            layoutHistory = view.findViewById(R.id.layout_history);
-            layoutFAQ = view.findViewById(R.id.layout_faq);
-            layoutContactUs = view.findViewById(R.id.layout_contactus);
 
+            //region Linear layout layout history
+            layoutHistory = view.findViewById(R.id.layout_history);
             layoutHistory.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getContext(), HistoryActivity.class));
+                    startActivity(new Intent(getContext(), ActivityHistory.class));
                 }
             });
+            //endregion
 
+            //region Linear layout FAQ
+            layoutFAQ = view.findViewById(R.id.layout_faq);
             layoutFAQ.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getContext(), FaqActivity.class));
+                    startActivity(new Intent(getContext(), ActivityFaq.class));
                 }
             });
+            //endregion
 
+            //region Linear Layout contact us
+            layoutContactUs = view.findViewById(R.id.layout_contactus);
             layoutContactUs.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getContext(), ContactUsActivity.class));
+                    startActivity(new Intent(getContext(), ActivityContactUs.class));
                 }
             });
+            //endregion
         }
         return view;
     }

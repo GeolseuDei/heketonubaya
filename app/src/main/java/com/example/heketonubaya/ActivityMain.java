@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityMain extends AppCompatActivity {
 
     boolean backPressedOnce = false;
     FragmentTransaction ft;
@@ -18,31 +18,37 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //region Set fragment awal
         ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.mainFrame, new HomeFragment(), "HOME");
+        ft.replace(R.id.mainFrame, new FragmentHome());
         ft.commit();
+        //endregion
 
         LinearLayout layoutHome, layoutProfile;
-        layoutHome = findViewById(R.id.layout_home);
-        layoutProfile = findViewById(R.id.layout_profile);
 
+        //region Linear Layout layouthome
+        layoutHome = findViewById(R.id.layout_home);
         layoutHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mainFrame, new HomeFragment());
+                ft.replace(R.id.mainFrame, new FragmentHome());
                 ft.commit();
             }
         });
+        //endregion
 
+        //region Linear Layout profile
+        layoutProfile = findViewById(R.id.layout_profile);
         layoutProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mainFrame, new ProfileFragment());
+                ft.replace(R.id.mainFrame, new FragmentProfile());
                 ft.commit();
             }
         });
+        //endregion
     }
 
     @Override

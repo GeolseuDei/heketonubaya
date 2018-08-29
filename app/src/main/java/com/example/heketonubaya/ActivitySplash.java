@@ -5,7 +5,7 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SplashActivity extends AppCompatActivity {
+public class ActivitySplash extends AppCompatActivity {
 
     CountDownTimer c;
 
@@ -23,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                startActivity(new Intent(getApplicationContext(), ActivityLogin.class));
             }
         }.start();
     }
