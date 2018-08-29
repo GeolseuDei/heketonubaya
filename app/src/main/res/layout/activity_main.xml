@@ -43,11 +43,11 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_home_white_24dp"/>
+                android:src="@drawable/ic_history_white_24dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Something"
+                android:text="Timeline"
                 android:textColor="@color/white"/>
         </LinearLayout>
         <LinearLayout
@@ -60,11 +60,11 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_home_white_24dp"/>
+                android:src="@drawable/ic_priority_high_black_24dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Something"
+                android:text="Request"
                 android:textColor="@color/white"/>
         </LinearLayout>
         <LinearLayout
@@ -86,6 +86,7 @@
                 android:textColor="@color/white"/>
         </LinearLayout>
     </LinearLayout>
+
     <FrameLayout
         android:id="@+id/mainFrame"
         android:layout_width="match_parent"

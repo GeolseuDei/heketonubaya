@@ -24,7 +24,8 @@
         <activity android:name=".ActivityMain" />
         <activity android:name=".ActivityContactUs" />
         <activity android:name=".ActivityFaq" />
-        <activity android:name=".ActivityHistory"></activity>
+        <activity android:name=".ActivityHistory" />
+        <activity android:name=".ActivityEditProfile"></activity>
     </application>
 
 </manifest>

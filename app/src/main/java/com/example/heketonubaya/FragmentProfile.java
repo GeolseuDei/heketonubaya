@@ -33,6 +33,12 @@ public class FragmentProfile extends Fragment {
 
             LinearLayout layoutEditProfile, layoutHistory, layoutFAQ, layoutContactUs;
             layoutEditProfile = view.findViewById(R.id.layout_editprofile);
+            layoutEditProfile.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getContext(), ActivityEditProfile.class));
+                }
+            });
 
             //region Linear layout layout history
             layoutHistory = view.findViewById(R.id.layout_history);
