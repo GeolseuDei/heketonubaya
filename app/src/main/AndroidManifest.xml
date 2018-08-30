@@ -25,7 +25,14 @@
         <activity android:name=".ActivityContactUs" />
         <activity android:name=".ActivityFaq" />
         <activity android:name=".ActivityHistory" />
-        <activity android:name=".ActivityEditProfile"></activity>
+        <activity android:name=".ActivityEditProfile" />
+        <activity android:name=".ActivityWirausaha" />
+        <activity android:name=".ActivityPuskesmas" />
+        <activity android:name=".ActivityPmk" />
+        <activity android:name=".ActivityKoperasi" />
+        <activity android:name=".ActivitySekolah" />
+        <activity android:name=".ActivityFasilitasOlahraga" />
+        <activity android:name=".ActivityCagarBudaya"></activity>
     </application>
 
 </manifest>

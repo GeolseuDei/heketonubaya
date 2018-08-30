@@ -42,57 +42,67 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
+                    android:id="@+id/btnWirausaha"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bordersectionhome"
-                    android:text="Wirausaha"
                     android:drawableTop="@drawable/wirausaha"
-                    android:layout_margin="5dp"/>
+                    android:text="Wirausaha" />
+
                 <Button
+                    android:id="@+id/btnPuskesmas"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bordersectionhome"
                     android:drawableTop="@drawable/puskesmas"
-                    android:text="puskesmas"
-                    android:layout_margin="5dp"/>
+                    android:text="puskesmas" />
             </LinearLayout>
             <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
+                    android:id="@+id/btnPmk"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bordersectionhome"
-                    android:text="pmk"
                     android:drawableTop="@drawable/pmk"
-                    android:layout_margin="5dp"/>
+                    android:text="pmk" />
+
                 <Button
+                    android:id="@+id/btnKoperasi"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bordersectionhome"
-                    android:text="koperasi"
                     android:drawableTop="@drawable/koperasi"
-                    android:layout_margin="5dp"/>
+                    android:text="koperasi" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
+                    android:id="@+id/btnSekolah"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bordersectionhome"
-                    android:text="Sekolah"
                     android:drawableTop="@drawable/ic_school_black_50dp"
-                    android:layout_margin="5dp"/>
+                    android:text="Sekolah" />
                 <Button
                     android:visibility="invisible"
                     android:layout_width="0dp"
@@ -135,22 +145,26 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <Button
+                    android:id="@+id/btnOlahraga"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bordersectionhome"
-                    android:text="fasilitas\nolahraga"
                     android:drawableTop="@drawable/olahraga"
-                    android:layout_margin="5dp"/>
+                    android:text="fasilitas\nolahraga" />
+
                 <Button
+                    android:id="@+id/btnCagar"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/bordersectionhome"
-                    android:text="cagar\nbudaya"
                     android:drawableTop="@drawable/cagarbudaya"
-                    android:layout_margin="5dp"/>
+                    android:text="cagar\nbudaya" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
