@@ -1,13 +1,22 @@
 package com.example.heketonubaya;
 
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+
 public class ActivityHistory extends AppCompatActivity {
+
+    FragmentTransaction ft;
+    RecyclerView recyclerView;
+    ArrayList<String> strings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,39 +28,49 @@ public class ActivityHistory extends AppCompatActivity {
             supportActionBar.setHomeAsUpIndicator(R.drawable.ic_chevron_left_white_24dp);
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         }
-        setTitle("PENDING");
-
-        LinearLayout layoutPending, layoutUsing, layoutHistory;
-
-        //region Linear layout layout pending
-        layoutPending = findViewById(R.id.layout_pending);
-        layoutPending.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTitle("PENDING");
-            }
-        });
+        setTitle("HISTORY");
+//        ft = getSupportFragmentManager().beginTransaction();
+//        ft.replace(R.id.historyFrame, new FragmentPending());
+//        ft.commit();
+//
+//        LinearLayout layoutPending, layoutHistory;
+//
+//        //region Linear layout layout pending
+//        layoutPending = findViewById(R.id.layout_pending);
+//        layoutPending.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                setTitle("PENDING");
+//                ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.historyFrame, new FragmentPending());
+//                ft.commit();
+//            }
+//        });
+//        //endregion
+//
+//        //region Linear layout layout history
+//        layoutHistory = findViewById(R.id.layout_history);
+//        layoutHistory.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                setTitle("HISTORY");
+//                ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.historyFrame, new FragmentPending());
+//                ft.commit();
+//            }
+//        });
         //endregion
 
-        //region Linear layout layut using
-        layoutUsing = findViewById(R.id.layout_using);
-        layoutUsing.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTitle("USING");
-            }
-        });
-        //endregion
+        recyclerView = findViewById(R.id.rclKonten);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        //region Linear layout layout history
-        layoutHistory = findViewById(R.id.layout_history);
-        layoutHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTitle("HISTORY");
-            }
-        });
-        //endregion
+        strings = new ArrayList<>();
+
+        for (int i = 0; i < 5; i++) {
+            strings.add("");
+        }
+
+        recyclerView.setAdapter(new AdapterPending(strings, getApplicationContext()));
     }
 
     @Override

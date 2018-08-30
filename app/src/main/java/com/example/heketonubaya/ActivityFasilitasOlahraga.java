@@ -2,11 +2,13 @@ package com.example.heketonubaya;
 
 import android.net.Uri;
 import android.os.StrictMode;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -34,6 +36,12 @@ public class ActivityFasilitasOlahraga extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fasilitas_olahraga);
+
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            supportActionBar.setHomeAsUpIndicator(R.drawable.ic_chevron_left_white_24dp);
+            supportActionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         StrictMode.ThreadPolicy policy;
         policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -123,5 +131,16 @@ public class ActivityFasilitasOlahraga extends AppCompatActivity {
         } finally {
             conn.disconnect();
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
