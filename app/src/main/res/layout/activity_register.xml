@@ -95,20 +95,20 @@
             app:layout_constraintStart_toStartOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/frmUpload" />
 
-        <!--<com.jaredrummler.materialspinner.MaterialSpinner-->
-            <!--android:id="@+id/spnInstansi"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_marginStart="16dp"-->
-            <!--android:layout_marginTop="16dp"-->
-            <!--android:layout_marginEnd="16dp"-->
-            <!--android:hint="Instansi"-->
-            <!--app:layout_constraintEnd_toEndOf="parent"-->
-            <!--app:layout_constraintHorizontal_bias="0.0"-->
-            <!--app:layout_constraintStart_toStartOf="parent"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/textView2"-->
-            <!--app:ms_dropdown_height="300dp"-->
-            <!--app:ms_dropdown_max_height="300dp" />-->
+        <com.jaredrummler.materialspinner.MaterialSpinner
+            android:id="@+id/spnInstansi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Instansi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:ms_dropdown_height="300dp"
+            app:ms_dropdown_max_height="300dp" />
 
         <Button
             android:id="@+id/btnSubmit"
@@ -120,7 +120,9 @@
             android:text="LANJUTKAN"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spnInstansi" />
+            app:layout_constraintTop_toBottomOf="@+id/spnInstansi"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"/>
     </android.support.constraint.ConstraintLayout>
 
 </ScrollView>

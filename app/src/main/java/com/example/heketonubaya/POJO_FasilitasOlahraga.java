@@ -1,6 +1,9 @@
 package com.example.heketonubaya;
 
-public class POJO_FasilitasOlahraga {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class POJO_FasilitasOlahraga implements Parcelable {
     private String id;
     private String nama_prasarana;
     private String jenis_prasarana_olahraga;
@@ -13,6 +16,57 @@ public class POJO_FasilitasOlahraga {
     private String tahun_rehabilitasi;
     private String luas;
     private String user_id;
+
+    public POJO_FasilitasOlahraga() {
+    }
+
+    protected POJO_FasilitasOlahraga(Parcel in) {
+        id = in.readString();
+        nama_prasarana = in.readString();
+        jenis_prasarana_olahraga = in.readString();
+        bidang_olahraga = in.readString();
+        kecamatan = in.readString();
+        kelurahan = in.readString();
+        alamat = in.readString();
+        kondisi_prasarana = in.readString();
+        tahun_dibangun = in.readString();
+        tahun_rehabilitasi = in.readString();
+        luas = in.readString();
+        user_id = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(nama_prasarana);
+        dest.writeString(jenis_prasarana_olahraga);
+        dest.writeString(bidang_olahraga);
+        dest.writeString(kecamatan);
+        dest.writeString(kelurahan);
+        dest.writeString(alamat);
+        dest.writeString(kondisi_prasarana);
+        dest.writeString(tahun_dibangun);
+        dest.writeString(tahun_rehabilitasi);
+        dest.writeString(luas);
+        dest.writeString(user_id);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<POJO_FasilitasOlahraga> CREATOR = new Creator<POJO_FasilitasOlahraga>() {
+        @Override
+        public POJO_FasilitasOlahraga createFromParcel(Parcel in) {
+            return new POJO_FasilitasOlahraga(in);
+        }
+
+        @Override
+        public POJO_FasilitasOlahraga[] newArray(int size) {
+            return new POJO_FasilitasOlahraga[size];
+        }
+    };
 
     public String getId() {
         return id;

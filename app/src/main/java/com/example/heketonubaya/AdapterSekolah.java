@@ -62,14 +62,14 @@ public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder
         textView2.setText(pojo_sekolah.getStatus().equals("N") ? "Negeri" : "Swasta");
 
         ImageView imageView = holder.itemView.findViewById(R.id.img_item_photo);
-        Glide.with(context).load(R.mipmap.ic_launcher).into(imageView);
+        Glide.with(context).load(R.drawable.fotosekolah).into(imageView);
 
         Button button = holder.itemView.findViewById(R.id.btn_details);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
-                intent.putExtra("id", pojo_sekolah.getNpsn());
+                Intent intent = new Intent(context, ActivityDetailSekolah.class);
+                intent.putExtra("pojo_sekolah", pojo_sekolah);
                 context.startActivity(intent);
             }
         });

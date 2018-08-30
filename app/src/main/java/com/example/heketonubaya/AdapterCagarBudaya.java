@@ -63,14 +63,14 @@ public class AdapterCagarBudaya extends RecyclerView.Adapter<RecyclerView.ViewHo
         textView1.setText(pojo_cagarBudaya.getAlamat());
         textView2.setText(pojo_cagarBudaya.getKondisi());
 
-        Glide.with(context).load(R.mipmap.ic_launcher).into(imageView);
+        Glide.with(context).load(R.drawable.monumen).into(imageView);
 
         Button button = holder.itemView.findViewById(R.id.btn_details);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
-                intent.putExtra("id", pojo_cagarBudaya.getId());
+                Intent intent = new Intent(context, ActivityDetailCagarBudaya.class);
+                intent.putExtra("pojo_cagar_budaya", pojo_cagarBudaya);
                 context.startActivity(intent);
             }
         });

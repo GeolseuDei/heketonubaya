@@ -1,6 +1,9 @@
 package com.example.heketonubaya;
 
-public class POJO_CagarBudaya {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class POJO_CagarBudaya implements Parcelable {
     private String id;
     private String nama_bangunan;
     private String alamat;
@@ -13,6 +16,57 @@ public class POJO_CagarBudaya {
     private String kondisi;
     private String keterangan;
     private String user_id;
+
+    public POJO_CagarBudaya() {
+    }
+
+    protected POJO_CagarBudaya(Parcel in) {
+        id = in.readString();
+        nama_bangunan = in.readString();
+        alamat = in.readString();
+        golongan = in.readString();
+        kelurahan = in.readString();
+        kecamatan = in.readString();
+        nomor_sk = in.readString();
+        tahun_sk = in.readString();
+        kepemilikan = in.readString();
+        kondisi = in.readString();
+        keterangan = in.readString();
+        user_id = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(nama_bangunan);
+        dest.writeString(alamat);
+        dest.writeString(golongan);
+        dest.writeString(kelurahan);
+        dest.writeString(kecamatan);
+        dest.writeString(nomor_sk);
+        dest.writeString(tahun_sk);
+        dest.writeString(kepemilikan);
+        dest.writeString(kondisi);
+        dest.writeString(keterangan);
+        dest.writeString(user_id);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<POJO_CagarBudaya> CREATOR = new Creator<POJO_CagarBudaya>() {
+        @Override
+        public POJO_CagarBudaya createFromParcel(Parcel in) {
+            return new POJO_CagarBudaya(in);
+        }
+
+        @Override
+        public POJO_CagarBudaya[] newArray(int size) {
+            return new POJO_CagarBudaya[size];
+        }
+    };
 
     public String getId() {
         return id;

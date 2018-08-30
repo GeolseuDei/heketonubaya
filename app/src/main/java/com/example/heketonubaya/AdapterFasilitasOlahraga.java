@@ -61,15 +61,16 @@ public class AdapterFasilitasOlahraga extends RecyclerView.Adapter<RecyclerView.
 
         textView.setText(pojo_fasilitasOlahraga.getNama_prasarana());
         textView1.setText(pojo_fasilitasOlahraga.getAlamat());
-        textView2.setText(pojo_fasilitasOlahraga.getLuas() + " meter");
-        Glide.with(context).load(R.mipmap.ic_launcher).into(imageView);
+//        textView2.setText(pojo_fasilitasOlahraga.getLuas() + " meter");
+        textView2.setText("");
+        Glide.with(context).load(R.drawable.lapangan).into(imageView);
 
         Button button = holder.itemView.findViewById(R.id.btn_details);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
-                intent.putExtra("id", pojo_fasilitasOlahraga.getId());
+                Intent intent = new Intent(context, ActivityDetailFasilitasOlahraga.class);
+                intent.putExtra("pojo_fasilitas_olahraga", pojo_fasilitasOlahraga);
                 context.startActivity(intent);
             }
         });
