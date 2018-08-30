@@ -11,9 +11,11 @@ import java.util.ArrayList;
 public class AdapterKoperasi extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     Context context;
+    ArrayList<POJO_Koperasi> pojo_koperasis;
 
-    public AdapterKoperasi(Context context){
+    public AdapterKoperasi(ArrayList<POJO_Koperasi> pojo_koperasis, Context context){
         this.context = context;
+        this.pojo_koperasis = pojo_koperasis;
     }
 
     @Override

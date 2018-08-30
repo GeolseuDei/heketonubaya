@@ -17,7 +17,7 @@ public class ActivityKoperasi extends AppCompatActivity {
         //region Recyclerview Konten
         RecyclerView rclKonten = findViewById(R.id.rclKonten);
         rclKonten.setLayoutManager(new LinearLayoutManager(this));
-        rclKonten.setAdapter(new AdapterKoperasi(this));
+        rclKonten.setAdapter(new AdapterKoperasi(new ArrayList<POJO_Koperasi>(),this));
         //endregion
     }
 }
