@@ -27,7 +27,7 @@
             android:scaleType="centerCrop" />
 
         <TextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -39,25 +39,29 @@
             android:text="@string/nama"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
             tools:ignore="RtlHardcoded" />
 
         <TextView
             android:id="@+id/tv_alamat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_name"
+            android:layout_below="@id/tv_nama"
             android:layout_marginBottom="8dp"
             android:layout_marginLeft="@dimen/activity_vertical_margin"
             android:layout_marginRight="@dimen/activity_vertical_margin"
             android:layout_toEndOf="@id/img_item_photo"
             android:text="@string/alamat"
+            android:maxLines="2"
+            android:ellipsize="end"
             tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/tv_kondisi"
             android:layout_width="106dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/tv_name"
+            android:layout_alignStart="@+id/tv_nama"
             android:layout_below="@+id/tv_alamat"
             android:layout_marginTop="-8dp"
             android:text="Kondisi"

@@ -8,6 +8,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -40,15 +45,34 @@ public class AdapterPuskesmas extends RecyclerView.Adapter<RecyclerView.ViewHold
         final POJO_Puskesmas pojo_puskesmas = pojo_puskesmass.get(position);
 
         //region Constraint Root
-        CardView cardView = holder.itemView.findViewById(R.id.card_view);
-        cardView.setOnClickListener(new View.OnClickListener() {
+//        CardView cardView = holder.itemView.findViewById(R.id.card_view);
+//        cardView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
+//                intent.putExtra("id", pojo_puskesmas.getId());
+//                context.startActivity(intent);
+//            }
+//        });
+
+        TextView textView = holder.itemView.findViewById(R.id.tv_nama);
+        TextView textView1 = holder.itemView.findViewById(R.id.tv_alamat);
+        ImageView imageView = holder.itemView.findViewById(R.id.img_item_photo);
+
+        textView.setText(pojo_puskesmas.getNama_puskesmas());
+        textView1.setText(pojo_puskesmas.getAlamat());
+        Glide.with(context).load(R.mipmap.ic_launcher).into(imageView);
+
+        Button button = holder.itemView.findViewById(R.id.btn_details);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 Intent intent = new Intent(context, ActivityDetailWirausaha.class);
                 intent.putExtra("id", pojo_puskesmas.getId());
                 context.startActivity(intent);
             }
         });
+
         //endregion
     }
 
