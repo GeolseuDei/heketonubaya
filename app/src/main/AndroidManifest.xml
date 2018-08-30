@@ -35,7 +35,9 @@
         <activity android:name=".ActivitySekolah" />
         <activity android:name=".ActivityFasilitasOlahraga" />
         <activity android:name=".ActivityCagarBudaya" />
-        <activity android:name=".ActivityDetailWirausaha"></activity>
+        <activity android:name=".ActivityDetailWirausaha" />
+        <activity android:name=".ActivityRegister" />
+        <activity android:name=".ActivityRegistrasiInstansi"></activity>
     </application>
 
 </manifest>
