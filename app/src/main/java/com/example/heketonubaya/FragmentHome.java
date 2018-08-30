@@ -1,6 +1,7 @@
 package com.example.heketonubaya;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -41,7 +42,71 @@ public class FragmentHome extends Fragment {
         });
         //endregion
 
+        //region Button Puskesmas
+        Button btnPuskesmas = view.findViewById(R.id.btnPuskesmas);
+        btnPuskesmas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivityPuskesmas.class);
+                startActivity(intent);
+            }
+        });
+        //endregion
 
+        //region Button PMK
+        Button btnPmk = view.findViewById(R.id.btnPmk);
+        btnPmk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivityPmk.class);
+                startActivity(intent);
+            }
+        });
+        //endregion
+
+        //region Button Koperasi
+        Button btnKoperasi = view.findViewById(R.id.btnKoperasi);
+        btnKoperasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivityKoperasi.class);
+                startActivity(intent);
+            }
+        });
+        //endregion
+
+        //region Button Sekolah
+        Button btnSekolah = view.findViewById(R.id.btnSekolah);
+        btnSekolah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivitySekolah.class);
+                startActivity(intent);
+            }
+        });
+        //endregion
+
+        //region Button Fasilitas Olahraga
+        Button btnOlahraga = view.findViewById(R.id.btnOlahraga);
+        btnOlahraga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivityFasilitasOlahraga.class);
+                startActivity(intent);
+            }
+        });
+        //endregion
+
+        //region Button Cagar Budaya
+        Button btnCagarBudaya = view.findViewById(R.id.btnCagar);
+        btnCagarBudaya.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ActivityCagarBudaya.class);
+                startActivity(intent);
+            }
+        });
+        //endregion
 
         return view;
     }
