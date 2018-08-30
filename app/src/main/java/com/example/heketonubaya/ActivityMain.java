@@ -24,7 +24,7 @@ public class ActivityMain extends AppCompatActivity {
         ft.commit();
         //endregion
 
-        LinearLayout layoutHome, layoutProfile;
+        LinearLayout layoutHome, layoutProfile, layoutTimeline, layoutRequest;
 
         //region Linear Layout layouthome
         layoutHome = findViewById(R.id.layout_home);
@@ -49,6 +49,27 @@ public class ActivityMain extends AppCompatActivity {
             }
         });
         //endregion
+
+        //region Linear Layout Timeline
+        layoutTimeline = findViewById(R.id.layout_timeline);
+        layoutTimeline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.mainFrame, new FragmentTimeline());
+                ft.commit();
+            }
+        });
+        //endregion
+
+        layoutRequest = findViewById(R.id.layout_request);
+        layoutRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
     }
 
     @Override
