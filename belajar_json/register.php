@@ -14,10 +14,11 @@ if ($conn->connect_error) {
 $username = mysqli_real_escape_string($conn, $_POST['username']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 $role = mysqli_real_escape_string($conn, $_POST['role']);
+$foto = mysqli_real_escape_string($conn, $_POST['foto']);
 $status = mysqli_real_escape_string($conn, $_POST['status']);
 
-$sql = "INSERT INTO user (username, password, role, status)
-VALUES ('$username', '$password', '$role@', '$status')";
+$sql = "INSERT INTO user (username, password, role, foto, status)
+VALUES ('$username', '$password', '$role', '$foto' ,'$status')";
 
 if ($conn->query($sql) === TRUE) {
 	echo "New record created successfully";
