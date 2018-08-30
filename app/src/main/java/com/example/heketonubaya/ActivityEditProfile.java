@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.jaredrummler.materialspinner.MaterialSpinner;
+
 public class ActivityEditProfile extends AppCompatActivity {
 
     @Override
@@ -14,7 +16,23 @@ public class ActivityEditProfile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
 
+        //region Spinner Kecamatan
+        MaterialSpinner spnKecamatan = findViewById(R.id.spnKecamatan);
+        spnKecamatan.setItems("Asemrowo","Sukomanunggal","Tandes");
+        spnKecamatan.setSelectedIndex(1);
+        //endregion
+
+        //region Spinner Kelurahan
+        MaterialSpinner spnKelurahan = findViewById(R.id.spnKelurahan);
+        spnKelurahan.setItems("Asem Rowo","Manukan Kulon","Tanjungsari");
+        spnKelurahan.setSelectedIndex(2);
+        //endregion
+
+        //region Editteks username
         final POJO_User pojo_user = getIntent().getExtras().getParcelable("pojo_user");
+        EditText edt_user_name = findViewById(R.id.et_user_name);
+        edt_user_name.setText(pojo_user.getUsername());
+        //endregion
 
         //region Button SImpan
         Button btnSimpan = findViewById(R.id.btnSimpan);
