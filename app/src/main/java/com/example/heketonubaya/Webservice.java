@@ -13,4 +13,13 @@ public class Webservice {
         }
     }
 
+    public boolean register(String username, String password, String foto, String legalitas, String nama, String alamat, String telpon){
+        boolean hasil = true;
+        if(hasil){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
