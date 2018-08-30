@@ -15,7 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jaredrummler.materialspinner.MaterialSpinner;
+//import com.jaredrummler.materialspinner.MaterialSpinner;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -57,8 +57,8 @@ public class ActivityRegister extends AppCompatActivity {
         stringList.add("Sekolah");
         stringList.add("Fasilitas Olahraga");
         stringList.add("Cagar Budaya");
-        final MaterialSpinner spnInstansi = findViewById(R.id.spnInstansi);
-        spnInstansi.setItems(stringList);
+//        final MaterialSpinner spnInstansi = findViewById(R.id.spnInstansi);
+//        spnInstansi.setItems(stringList);
         //endregion
 
         //region Button submit
@@ -82,7 +82,7 @@ public class ActivityRegister extends AppCompatActivity {
                     intent.putExtra("username", edtUsername.getText().toString());
                     intent.putExtra("password", password);
                     intent.putExtra("foto", imageToString(bitmap));
-                    intent.putExtra("instansi", stringList.get(spnInstansi.getSelectedIndex()));
+//                    intent.putExtra("instansi", stringList.get(spnInstansi.getSelectedIndex()));
                     startActivity(intent);
                 }
             }

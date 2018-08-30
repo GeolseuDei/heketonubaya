@@ -74,7 +74,9 @@ public class ActivityMain extends AppCompatActivity {
         layoutRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ft = getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.mainFrame, new FragmentRequest());
+                ft.commit();
             }
         });
         //endregion

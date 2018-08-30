@@ -51,4 +51,30 @@
             android:layout_height="wrap_content"
             android:text="@string/lorem" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <Button
+            android:layout_margin="2.5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/borderterima"
+            android:text="Terima"/>
+        <Button
+            android:layout_margin="2.5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Tolak"
+            android:textColor="@color/white"
+            android:background="@drawable/bordertolak"/>
+    </LinearLayout>
 </LinearLayout>
