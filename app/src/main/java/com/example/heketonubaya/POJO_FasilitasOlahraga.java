@@ -12,6 +12,7 @@ public class POJO_FasilitasOlahraga {
     private String tahun_dibangun;
     private String tahun_rehabilitasi;
     private String luas;
+    private String user_id;
 
     public String getId() {
         return id;
@@ -99,5 +100,13 @@ public class POJO_FasilitasOlahraga {
 
     public void setLuas(String luas) {
         this.luas = luas;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 }

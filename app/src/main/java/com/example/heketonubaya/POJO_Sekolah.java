@@ -8,6 +8,7 @@ public class POJO_Sekolah {
     private String jenjang;
     private String lat;
     private String lng;
+    private String user_id;
 
     public String getNpsn() {
         return npsn;
@@ -63,5 +64,13 @@ public class POJO_Sekolah {
 
     public void setLng(String lng) {
         this.lng = lng;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 }

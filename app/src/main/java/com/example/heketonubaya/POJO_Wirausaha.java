@@ -10,6 +10,7 @@ public class POJO_Wirausaha {
     private String telepon;
     private String jenis_usaha;
     private String nik;
+    private String user_id;
 
     public String getId() {
         return id;
@@ -81,5 +82,13 @@ public class POJO_Wirausaha {
 
     public void setNik(String nik) {
         this.nik = nik;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 }

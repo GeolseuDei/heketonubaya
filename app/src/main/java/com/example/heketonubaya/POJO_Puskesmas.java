@@ -7,6 +7,7 @@ public class POJO_Puskesmas {
     private String kode_puskesmas;
     private String kelurahan;
     private String alamat;
+    private String user_id;
 
     public String getId() {
         return id;
@@ -54,5 +55,13 @@ public class POJO_Puskesmas {
 
     public void setAlamat(String alamat) {
         this.alamat = alamat;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 }

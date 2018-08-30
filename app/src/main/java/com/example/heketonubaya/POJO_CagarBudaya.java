@@ -12,6 +12,7 @@ public class POJO_CagarBudaya {
     private String kepemilikan;
     private String kondisi;
     private String keterangan;
+    private String user_id;
 
     public String getId() {
         return id;
@@ -99,5 +100,13 @@ public class POJO_CagarBudaya {
 
     public void setKeterangan(String keterangan) {
         this.keterangan = keterangan;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 }

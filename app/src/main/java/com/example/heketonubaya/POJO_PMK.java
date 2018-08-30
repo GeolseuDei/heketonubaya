@@ -7,6 +7,7 @@ public class POJO_PMK {
     private String alamat;
     private String telepon;
     private String kondisi;
+    private String user_id;
 
     public String getId() {
         return id;
@@ -54,5 +55,13 @@ public class POJO_PMK {
 
     public void setKondisi(String kondisi) {
         this.kondisi = kondisi;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 }
