@@ -27,13 +27,14 @@
                 android:layout_gravity="center"/>
 
             <TextView
-                android:layout_marginTop="8dp"
+                android:id="@+id/txtUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"
+                android:layout_marginTop="8dp"
                 android:text="Uvuvwevwevwe Onyetenyevwe Ugwemubwem Ossas"
-                android:textSize="24sp"
-                android:textColor="@color/black"/>
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
         </LinearLayout>
 
         <LinearLayout

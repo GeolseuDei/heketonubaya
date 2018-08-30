@@ -43,8 +43,15 @@ public class ActivityMain extends AppCompatActivity {
         layoutProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Bundle bundle = new Bundle();
+                bundle.putParcelable("pojo_user", getIntent().getExtras().getParcelable("pojo_user"));
+
                 ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.mainFrame, new FragmentProfile());
+                FragmentProfile fragmentProfile = new FragmentProfile();
+                fragmentProfile.setArguments(bundle);
+
+                ft.replace(R.id.mainFrame, fragmentProfile);
                 ft.commit();
             }
         });
@@ -62,6 +69,7 @@ public class ActivityMain extends AppCompatActivity {
         });
         //endregion
 
+        //region Linear Layout Request
         layoutRequest = findViewById(R.id.layout_request);
         layoutRequest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +77,7 @@ public class ActivityMain extends AppCompatActivity {
 
             }
         });
+        //endregion
 
     }
 

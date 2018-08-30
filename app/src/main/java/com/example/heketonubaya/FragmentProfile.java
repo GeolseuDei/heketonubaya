@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 /**
@@ -31,7 +32,16 @@ public class FragmentProfile extends Fragment {
         if (view == null) {
             view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+
+            Bundle bundle = getArguments();
+            POJO_User pojo_user = bundle.getParcelable("pojo_user");
+
+            TextView txtUsername = view.findViewById(R.id.txtUsername);
+            txtUsername.setText(pojo_user.getUsername());
+
             LinearLayout layoutEditProfile, layoutHistory, layoutFAQ, layoutContactUs;
+
+            //region Linear Layout Edit Profil
             layoutEditProfile = view.findViewById(R.id.layout_editprofile);
             layoutEditProfile.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -39,6 +49,7 @@ public class FragmentProfile extends Fragment {
                     startActivity(new Intent(getContext(), ActivityEditProfile.class));
                 }
             });
+            //endregion
 
             //region Linear layout layout history
             layoutHistory = view.findViewById(R.id.layout_history);

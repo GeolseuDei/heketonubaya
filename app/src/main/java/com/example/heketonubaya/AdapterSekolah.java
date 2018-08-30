@@ -3,6 +3,7 @@ package com.example.heketonubaya;
 import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,8 +38,8 @@ public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder
         final POJO_Sekolah pojo_sekolah = pojo_sekolahs.get(position);
 
         //region Constraint Root
-        ConstraintLayout cnsView = holder.itemView.findViewById(R.id.cnsView);
-        cnsView.setOnClickListener(new View.OnClickListener() {
+        CardView cardView = holder.itemView.findViewById(R.id.card_view);
+        cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ActivityDetailWirausaha.class);
