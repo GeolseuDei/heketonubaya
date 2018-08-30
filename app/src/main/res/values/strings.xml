@@ -3,4 +3,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="nama">Nama</string>
+    <string name="alamat">Alamat</string>
+    <string name="details">Details</string>
+    <string name="alamat">Alamat</string>
+    <string name="nama">Nama</string>
+    <string name="todo">TODO</string>
+    <string name="details">Details</string>
+    <string name="wilayah">Wilayah</string>
+    <string name="status">Status</string>
 </resources>
