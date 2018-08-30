@@ -51,6 +51,6 @@ public class AdapterFasilitasOlahraga extends RecyclerView.Adapter<RecyclerView.
 
     @Override
     public int getItemCount() {
-        return 0;
+        return pojo_fasilitasOlahragas.size();
     }
 }

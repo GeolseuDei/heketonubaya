@@ -1,6 +1,8 @@
 package com.example.heketonubaya;
 
 import android.content.Context;
+import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,11 +34,23 @@ public class AdapterKoperasi extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        final POJO_Koperasi pojo_koperasi = pojo_koperasis.get(position);
 
+        //region Constraint Root
+        ConstraintLayout cnsView = holder.itemView.findViewById(R.id.cnsView);
+        cnsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
+                intent.putExtra("id", pojo_koperasi.getId());
+                context.startActivity(intent);
+            }
+        });
+        //endregion
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return pojo_koperasis.size();
     }
 }

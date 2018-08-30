@@ -51,6 +51,6 @@ public class AdapterCagarBudaya extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     @Override
     public int getItemCount() {
-        return 0;
+        return pojo_cagarBudayas.size();
     }
 }
