@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class ActivityLogin extends AppCompatActivity {
 
@@ -37,6 +38,14 @@ public class ActivityLogin extends AppCompatActivity {
             }
         });
         //endregion
+
+        TextView tv_register = findViewById(R.id.tv_register);
+        tv_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ActivityRegister.class));
+            }
+        });
     }
 
     @Override
