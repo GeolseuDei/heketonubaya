@@ -1,5 +1,8 @@
 package com.example.heketonubaya;
 
+import android.content.Context;
+import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +13,11 @@ import java.util.ArrayList;
 public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     ArrayList<POJO_Sekolah> pojo_sekolahs;
+    Context context;
 
-    public AdapterSekolah(ArrayList<POJO_Sekolah> pojo_sekolahs){
+    public AdapterSekolah(ArrayList<POJO_Sekolah> pojo_sekolahs, Context context){
         this.pojo_sekolahs = pojo_sekolahs;
+        this.context = context;
     }
 
     @Override
@@ -29,7 +34,19 @@ public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        final POJO_Sekolah pojo_sekolah = pojo_sekolahs.get(position);
 
+        //region Constraint Root
+        ConstraintLayout cnsView = holder.itemView.findViewById(R.id.cnsView);
+        cnsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
+                intent.putExtra("id", pojo_sekolah.getNpsn());
+                context.startActivity(intent);
+            }
+        });
+        //endregion
     }
 
     @Override

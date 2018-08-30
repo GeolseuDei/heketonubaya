@@ -17,7 +17,7 @@ public class ActivityCagarBudaya extends AppCompatActivity {
         //region Recyclerview Konten
         RecyclerView rclKonten = findViewById(R.id.rclKonten);
         rclKonten.setLayoutManager(new LinearLayoutManager(this));
-        rclKonten.setAdapter(new AdapterCagarBudaya(new ArrayList<POJO_CagarBudaya>()));
+        rclKonten.setAdapter(new AdapterCagarBudaya(new ArrayList<POJO_CagarBudaya>(), this));
         //endregion
     }
 }

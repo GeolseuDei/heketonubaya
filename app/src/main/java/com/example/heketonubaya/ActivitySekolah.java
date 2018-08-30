@@ -17,7 +17,7 @@ public class ActivitySekolah extends AppCompatActivity {
         //region Recyclerview Konten
         RecyclerView rclKonten = findViewById(R.id.rclKonten);
         rclKonten.setLayoutManager(new LinearLayoutManager(this));
-        rclKonten.setAdapter(new AdapterSekolah(new ArrayList<POJO_Sekolah>()));
+        rclKonten.setAdapter(new AdapterSekolah(new ArrayList<POJO_Sekolah>(), this));
         //endregion
     }
 }

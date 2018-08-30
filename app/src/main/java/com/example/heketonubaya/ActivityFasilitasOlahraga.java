@@ -17,7 +17,7 @@ public class ActivityFasilitasOlahraga extends AppCompatActivity {
         //region Recyclerview Konten
         RecyclerView rclKonten = findViewById(R.id.rclKonten);
         rclKonten.setLayoutManager(new LinearLayoutManager(this));
-        rclKonten.setAdapter(new AdapterFasilitasOlahraga(new ArrayList<POJO_FasilitasOlahraga>()));
+        rclKonten.setAdapter(new AdapterFasilitasOlahraga(new ArrayList<POJO_FasilitasOlahraga>(), this));
         //endregion
     }
 }

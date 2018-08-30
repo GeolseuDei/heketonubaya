@@ -17,7 +17,7 @@ public class ActivityPuskesmas extends AppCompatActivity {
         //region Recyclerview Konten
         RecyclerView rclKonten = findViewById(R.id.rclKonten);
         rclKonten.setLayoutManager(new LinearLayoutManager(this));
-        rclKonten.setAdapter(new AdapterPuskesmas(new ArrayList<POJO_Puskesmas>()));
+        rclKonten.setAdapter(new AdapterPuskesmas(new ArrayList<POJO_Puskesmas>(), this));
         //endregion
     }
 }

@@ -1,5 +1,6 @@
 package com.example.heketonubaya;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +10,11 @@ import java.util.ArrayList;
 
 public class AdapterKoperasi extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    Context context;
 
-    public AdapterKoperasi(){}
+    public AdapterKoperasi(Context context){
+        this.context = context;
+    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

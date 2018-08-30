@@ -17,7 +17,7 @@ public class ActivityPmk extends AppCompatActivity {
         //region Recyclerview Konten
         RecyclerView rclKonten = findViewById(R.id.rclKonten);
         rclKonten.setLayoutManager(new LinearLayoutManager(this));
-        rclKonten.setAdapter(new AdapterPmk(new ArrayList<POJO_PMK>()));
+        rclKonten.setAdapter(new AdapterPmk(new ArrayList<POJO_PMK>(), this));
         //endregion
     }
 }

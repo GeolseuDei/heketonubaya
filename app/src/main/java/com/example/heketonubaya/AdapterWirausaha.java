@@ -44,7 +44,7 @@ public class AdapterWirausaha extends RecyclerView.Adapter<RecyclerView.ViewHold
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ActivityDetailWirausaha.class);
-                intent.putExtra("idWirausaha", pojo_wirausaha.getId());
+                intent.putExtra("id", pojo_wirausaha.getId());
                 context.startActivity(intent);
             }
         });
