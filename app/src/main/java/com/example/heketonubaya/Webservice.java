@@ -22,4 +22,13 @@ public class Webservice {
         }
     }
 
+    public boolean updateNamaProfil(String nama, String id){
+        boolean hasil = true;
+        if(hasil){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }

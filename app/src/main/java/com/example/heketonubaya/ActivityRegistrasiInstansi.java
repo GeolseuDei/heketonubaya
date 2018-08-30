@@ -66,7 +66,8 @@ public class ActivityRegistrasiInstansi extends AppCompatActivity {
 
                 Webservice webservice = new Webservice();
                 if(webservice.register(username,password,foto,imageToString(bitmap),edtNama.getText().toString(),edtAlamat.getText().toString(),edtTelpon.getText().toString())){
-
+                    Intent intent = new Intent(getApplicationContext(), ActivityLogin.class);
+                    startActivity(intent);
                 }
             }
         });

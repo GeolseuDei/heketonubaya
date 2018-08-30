@@ -79,7 +79,7 @@ public class ActivityRegister extends AppCompatActivity {
                 final BitmapDrawable bitmapDrawable = (BitmapDrawable) imgUpload.getDrawable();
                 final Bitmap bitmap = bitmapDrawable.getBitmap();
 
-                if(password.equals(edtRepassword.toString())){
+                if(password.equals(edtRepassword.getText().toString())){
                     final Intent intent = new Intent(getApplicationContext(), ActivityRegistrasiInstansi.class);
                     intent.putExtra("username", edtUsername.getText().toString());
                     intent.putExtra("password", password);

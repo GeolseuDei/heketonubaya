@@ -34,7 +34,7 @@ public class FragmentProfile extends Fragment {
 
 
             Bundle bundle = getArguments();
-            POJO_User pojo_user = bundle.getParcelable("pojo_user");
+            final POJO_User pojo_user = bundle.getParcelable("pojo_user");
 
             TextView txtUsername = view.findViewById(R.id.txtUsername);
             txtUsername.setText(pojo_user.getUsername());
@@ -46,7 +46,9 @@ public class FragmentProfile extends Fragment {
             layoutEditProfile.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getContext(), ActivityEditProfile.class));
+                    final Intent intent = new Intent(getContext(), ActivityEditProfile.class);
+                    intent.putExtra("pojo_user", pojo_user);
+                    startActivity(intent);
                 }
             });
             //endregion
