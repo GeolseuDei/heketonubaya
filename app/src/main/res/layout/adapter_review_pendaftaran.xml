@@ -70,7 +70,8 @@
             <ImageView
                 android:id="@+id/imgBuktiPendaftaran"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp"
+                android:scaleType="fitXY"
                 android:src="@drawable/user"/>
         </LinearLayout>
 
@@ -99,21 +100,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dp">
+
             <Button
-                android:layout_margin="2.5dp"
+                android:id="@+id/btnTerima"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:layout_weight="1"
                 android:background="@drawable/borderterima"
-                android:text="Terima"/>
+                android:text="Terima" />
+
             <Button
-                android:layout_margin="2.5dp"
+                android:id="@+id/btnTolak"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
+                android:layout_margin="2.5dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordertolak"
                 android:text="Tolak"
-                android:textColor="@color/white"
-                android:background="@drawable/bordertolak"/>
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 

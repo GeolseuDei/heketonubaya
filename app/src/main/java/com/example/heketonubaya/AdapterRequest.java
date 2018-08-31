@@ -37,7 +37,7 @@ public class AdapterRequest extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         TextView textView = holder.itemView.findViewById(R.id.tv_item_name);
         TextView textView1 = holder.itemView.findViewById(R.id.tv_from);
         TextView textView2 = holder.itemView.findViewById(R.id.tv_tanggal);
@@ -47,6 +47,28 @@ public class AdapterRequest extends RecyclerView.Adapter<RecyclerView.ViewHolder
         textView1.setText("From: "+pojo_requests.get(position).getFrom());
         textView2.setText(pojo_requests.get(position).getDate_req());
         textView3.setText(pojo_requests.get(position).getContent());
+
+        Button btnTerima, btnTolak;
+        btnTerima = holder.itemView.findViewById(R.id.btnTerima);
+        btnTolak = holder.itemView.findViewById(R.id.btnTolak);
+        btnTerima.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                removeItem(position);
+            }
+        });
+        btnTolak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                removeItem(position);
+            }
+        });
+    }
+
+    public void removeItem(int position){
+        pojo_requests.remove(position);
+        notifyItemRemoved(position);
+        notifyItemChanged(position, pojo_requests);
     }
 
     @Override

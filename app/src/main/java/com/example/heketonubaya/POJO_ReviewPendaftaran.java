@@ -10,6 +10,16 @@ public class POJO_ReviewPendaftaran {
     private String telepon;
     private String bukti;
 
+    public POJO_ReviewPendaftaran(String id, String nama, String jenis, String deskripsi, String alamat, String telepon, String bukti){
+        setId(id);
+        setNama(nama);
+        setJenis(jenis);
+        setDeskripsi(deskripsi);
+        setAlamat(alamat);
+        setTelepon(telepon);
+        setBukti(bukti);
+    }
+
     public String getId() {
         return id;
     }
