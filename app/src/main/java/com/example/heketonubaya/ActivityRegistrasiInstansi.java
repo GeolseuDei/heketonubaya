@@ -58,30 +58,34 @@ public class ActivityRegistrasiInstansi extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                EditText edtNama, edtAlamat, edtTelpon;
-                edtNama = findViewById(R.id.edtNama);
-                edtAlamat = findViewById(R.id.edtAlamat);
-                edtTelpon = findViewById(R.id.edtTelpon);
+//                EditText edtNama, edtAlamat, edtTelpon;
+//                edtNama = findViewById(R.id.edtNama);
+//                edtAlamat = findViewById(R.id.edtAlamat);
+//                edtTelpon = findViewById(R.id.edtTelpon);
+//
+//                final BitmapDrawable bitmapDrawable = (BitmapDrawable) imgUpload.getDrawable();
+//                final Bitmap bitmap = bitmapDrawable.getBitmap();
+//
+//                Webservice webservice = new Webservice();
+//                if (webservice.register(username, password, foto, imageToString(bitmap), edtNama.getText().toString(), edtAlamat.getText().toString(), edtTelpon.getText().toString())) {
+//
+//                    //region ALert DIalog
+//
+//                    //endregion
+//
+//                }
 
-                final BitmapDrawable bitmapDrawable = (BitmapDrawable) imgUpload.getDrawable();
-                final Bitmap bitmap = bitmapDrawable.getBitmap();
+//                AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+//                builder.setTitle("Terimakasih").setMessage("Data anda telah kami catat, mohon menunggu pemberitahuan berikutnya").show();
+//                builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+//                    @Override
+//                    public void onDismiss(DialogInterface dialog) {
+//
+//                    }
+//                });
 
-                Webservice webservice = new Webservice();
-                if (webservice.register(username, password, foto, imageToString(bitmap), edtNama.getText().toString(), edtAlamat.getText().toString(), edtTelpon.getText().toString())) {
-
-                    //region ALert DIalog
-                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
-                    builder.setTitle("Terimakasih").setMessage("Data anda telah kami catat, mohon menunggu pemberitahuan berikutnya");
-                    builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
-                        @Override
-                        public void onDismiss(DialogInterface dialog) {
-                            Intent intent = new Intent(getApplicationContext(), ActivityLogin.class);
-                            startActivity(intent);
-                        }
-                    });
-                    //endregion
-
-                }
+                Intent intent = new Intent(getApplicationContext(), ActivityLogin.class);
+                startActivity(intent);
             }
         });
         //endregion

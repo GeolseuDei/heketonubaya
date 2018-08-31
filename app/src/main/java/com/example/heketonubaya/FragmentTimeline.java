@@ -4,7 +4,9 @@ package com.example.heketonubaya;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.util.Pair;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -48,7 +50,9 @@ public class FragmentTimeline extends Fragment {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getContext(), ActivityWriteTimeline.class));
+                    Pair<View, String> pair1 = Pair.create((View) fab, fab.getTransitionName());
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),pair1);
+                    startActivity(new Intent(getContext(), ActivityWriteTimeline.class), options.toBundle());
                 }
             });
         }
