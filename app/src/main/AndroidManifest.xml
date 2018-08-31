@@ -62,7 +62,8 @@
             android:name=".ActivityDetailSekolah"
             android:label="@string/title_activity_detail_sekolah" />
         <activity android:name=".ActivityDetailCagarBudaya" />
-        <activity android:name=".ActivityDetailFasilitasOlahraga"></activity>
+        <activity android:name=".ActivityDetailFasilitasOlahraga" />
+        <activity android:name=".ActivityReviewPendaftaran"></activity>
     </application>
 
 </manifest>
