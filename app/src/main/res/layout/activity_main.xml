@@ -14,6 +14,7 @@
         android:layout_height="?attr/actionBarSize"
         android:layout_alignParentBottom="true"
         android:paddingLeft="10dp"
+        android:transitionName="bar"
         android:paddingRight="10dp">
         <LinearLayout
             android:id="@+id/layout_home"

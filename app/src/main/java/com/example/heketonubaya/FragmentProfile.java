@@ -3,12 +3,17 @@ package com.example.heketonubaya;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.util.Pair;
+import android.support.v4.view.ViewCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 /**
@@ -32,6 +37,7 @@ public class FragmentProfile extends Fragment {
         if (view == null) {
             view = inflater.inflate(R.layout.fragment_profile, container, false);
 
+            final View linearLayout = getActivity().findViewById(R.id.toolbar_bottom);
 
             Bundle bundle = getArguments();
             final POJO_User pojo_user = bundle.getParcelable("pojo_user");
@@ -48,7 +54,10 @@ public class FragmentProfile extends Fragment {
                 public void onClick(View view) {
                     final Intent intent = new Intent(getContext(), ActivityEditProfile.class);
                     intent.putExtra("pojo_user", pojo_user);
-                    startActivity(intent);
+                    Pair<View, String> pair1 = Pair.create(linearLayout, linearLayout.getTransitionName());
+                    ActivityOptionsCompat options = ActivityOptionsCompat.
+                            makeSceneTransitionAnimation(getActivity(), pair1);
+                    startActivity(intent, options.toBundle());
                 }
             });
             //endregion
@@ -78,7 +87,10 @@ public class FragmentProfile extends Fragment {
             layoutContactUs.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getContext(), ActivityContactUs.class));
+                    Pair<View, String> pair1 = Pair.create(linearLayout, linearLayout.getTransitionName());
+                    ActivityOptionsCompat options = ActivityOptionsCompat.
+                            makeSceneTransitionAnimation(getActivity(), pair1);
+                    startActivity(new Intent(getContext(), ActivityContactUs.class), options.toBundle());
                 }
             });
             //endregion

@@ -1,19 +1,25 @@
 package com.example.heketonubaya;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.support.v4.app.ActivityOptionsCompat.makeSceneTransitionAnimation;
 
 public class ActivityDetailWirausaha extends AppCompatActivity {
 
@@ -21,6 +27,7 @@ public class ActivityDetailWirausaha extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_wirausaha);
+        supportPostponeEnterTransition();
 
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
@@ -30,6 +37,7 @@ public class ActivityDetailWirausaha extends AppCompatActivity {
         setTitle("Detail Wirausaha");
 
         final POJO_Wirausaha pojo_wirausaha = getIntent().getExtras().getParcelable("pojo_wirausaha");
+        final String transition = getIntent().getExtras().getString("transition_name");
 
         TextView textView = findViewById(R.id.tv_nama);
         TextView textView1 = findViewById(R.id.tv_nik);
@@ -61,13 +69,26 @@ public class ActivityDetailWirausaha extends AppCompatActivity {
             }
         });
 
-        Button btnApply = findViewById(R.id.btn_apply);
+
+        final Button btnApply = findViewById(R.id.btn_apply);
+        btnApply.setTransitionName("apply"+transition);
         btnApply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), ActivityApply.class));
+                Intent intent = new Intent(getApplicationContext(), ActivityApply.class);
+                intent.putExtra("transition", transition);
+                Pair<View, String> pair1 = Pair.create((View) btnApply, btnApply.getTransitionName());
+                ActivityOptionsCompat options = makeSceneTransitionAnimation(ActivityDetailWirausaha.this, pair1);
+                startActivity(intent, options.toBundle());
             }
         });
+
+        ImageView imageView = findViewById(R.id.img);
+
+        textView.setTransitionName(transition);
+        imageView.setTransitionName("image"+transition);
+
+        supportStartPostponedEnterTransition();
     }
 
     boolean granted = false;

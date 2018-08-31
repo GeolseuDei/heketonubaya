@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 
 public class ActivityApply extends AppCompatActivity {
 
@@ -18,6 +19,13 @@ public class ActivityApply extends AppCompatActivity {
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         }
         setTitle("Apply");
+
+        supportPostponeEnterTransition();
+
+        Button btnApply = findViewById(R.id.btn_submit);
+        btnApply.setTransitionName("apply"+getIntent().getExtras().getString("transition"));
+
+        supportStartPostponedEnterTransition();
     }
 
     @Override

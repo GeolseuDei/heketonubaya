@@ -16,9 +16,11 @@
         <!--android:textSize="40sp"/>-->
 
     <ImageView
+        android:id="@+id/imgLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
         android:src="@drawable/logoicon"
-        android:layout_marginRight="20dp"/>
+        android:transitionName="logo" />
 
 </LinearLayout>
