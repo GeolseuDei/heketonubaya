@@ -17,9 +17,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".ActivitySplash"
             android:theme="@style/noActionBar">
@@ -65,8 +65,9 @@
             android:label="@string/title_activity_detail_sekolah" />
         <activity android:name=".ActivityDetailCagarBudaya" />
         <activity android:name=".ActivityDetailFasilitasOlahraga" />
-        <activity android:name=".ActivityApply"></activity>
-        <activity android:name=".ActivityReviewPendaftaran"></activity>
+        <activity android:name=".ActivityApply" />
+        <activity android:name=".ActivityReviewPendaftaran" />
+        <activity android:name=".ActivityDetailGambar"></activity>
     </application>
 
 </manifest>

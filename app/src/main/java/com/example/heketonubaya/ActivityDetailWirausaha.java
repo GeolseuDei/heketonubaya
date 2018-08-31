@@ -83,10 +83,21 @@ public class ActivityDetailWirausaha extends AppCompatActivity {
             }
         });
 
-        ImageView imageView = findViewById(R.id.img);
+        final ImageView imageView = findViewById(R.id.img);
 
         textView.setTransitionName(transition);
         imageView.setTransitionName("image"+transition);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ActivityDetailGambar.class);
+                intent.putExtra("id", R.drawable.fotowirausaha);
+                intent.putExtra("transition", transition);
+                Pair<View, String> pair1 = Pair.create((View) imageView, imageView.getTransitionName());
+                ActivityOptionsCompat options = makeSceneTransitionAnimation(ActivityDetailWirausaha.this, pair1);
+                startActivity(intent, options.toBundle());
+            }
+        });
 
         supportStartPostponedEnterTransition();
     }

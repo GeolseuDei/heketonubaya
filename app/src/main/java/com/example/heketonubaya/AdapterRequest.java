@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -61,6 +63,14 @@ public class AdapterRequest extends RecyclerView.Adapter<RecyclerView.ViewHolder
             @Override
             public void onClick(View view) {
                 removeItem(position);
+            }
+        });
+
+        LinearLayout llDownload = holder.itemView.findViewById(R.id.llDonwload);
+        llDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "file downloaded", Toast.LENGTH_SHORT).show();
             }
         });
     }
