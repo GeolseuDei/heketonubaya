@@ -1,10 +1,12 @@
 package com.example.heketonubaya;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -65,9 +67,20 @@ public class ActivityRegistrasiInstansi extends AppCompatActivity {
                 final Bitmap bitmap = bitmapDrawable.getBitmap();
 
                 Webservice webservice = new Webservice();
-                if(webservice.register(username,password,foto,imageToString(bitmap),edtNama.getText().toString(),edtAlamat.getText().toString(),edtTelpon.getText().toString())){
-                    Intent intent = new Intent(getApplicationContext(), ActivityLogin.class);
-                    startActivity(intent);
+                if (webservice.register(username, password, foto, imageToString(bitmap), edtNama.getText().toString(), edtAlamat.getText().toString(), edtTelpon.getText().toString())) {
+
+                    //region ALert DIalog
+                    AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+                    builder.setTitle("Terimakasih").setMessage("Data anda telah kami catat, mohon menunggu pemberitahuan berikutnya");
+                    builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                        @Override
+                        public void onDismiss(DialogInterface dialog) {
+                            Intent intent = new Intent(getApplicationContext(), ActivityLogin.class);
+                            startActivity(intent);
+                        }
+                    });
+                    //endregion
+
                 }
             }
         });

@@ -65,6 +65,7 @@
         <activity android:name=".ActivityDetailCagarBudaya" />
         <activity android:name=".ActivityDetailFasilitasOlahraga" />
         <activity android:name=".ActivityApply"></activity>
+        <activity android:name=".ActivityReviewPendaftaran"></activity>
     </application>
 
 </manifest>

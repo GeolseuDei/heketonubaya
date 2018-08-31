@@ -96,6 +96,9 @@ public class ActivityMain extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
+            case R.id.menu_review_registrasi:
+                startActivity(new Intent(getApplicationContext(), ActivityReviewPendaftaran.class));
+                break;
             case R.id.menu_logout:
                 startActivity(new Intent(getApplicationContext(), ActivityLogin.class));
                 break;
