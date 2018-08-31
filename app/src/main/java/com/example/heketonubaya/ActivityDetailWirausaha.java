@@ -60,6 +60,14 @@ public class ActivityDetailWirausaha extends AppCompatActivity {
                 requestPermission(pojo_wirausaha);
             }
         });
+
+        Button btnApply = findViewById(R.id.btn_apply);
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ActivityApply.class));
+            }
+        });
     }
 
     boolean granted = false;

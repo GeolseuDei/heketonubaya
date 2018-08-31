@@ -1,10 +1,13 @@
 package com.example.heketonubaya;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -46,6 +49,14 @@ public class ActivityDetailSekolah extends AppCompatActivity implements OnMapRea
 
         textView.setText(pojo_sekolah.getNama());
         textView1.setText(pojo_sekolah.getAlamat());
+
+        Button btnApply = findViewById(R.id.btn_apply);
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ActivityApply.class));
+            }
+        });
 
     }
 

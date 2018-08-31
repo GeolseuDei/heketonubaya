@@ -24,7 +24,7 @@ public class ActivityWriteTimeline extends AppCompatActivity {
         }
 
         EditText etTitle, etContent;
-        etTitle = findViewById(R.id.et_title);
+//        etTitle = findViewById(R.id.et_title);
         etContent = findViewById(R.id.et_content);
         Button btnSubmit = findViewById(R.id.btn_submit);
 

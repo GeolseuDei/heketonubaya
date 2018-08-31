@@ -1,9 +1,12 @@
 package com.example.heketonubaya;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class ActivityDetailFasilitasOlahraga extends AppCompatActivity {
@@ -37,6 +40,14 @@ public class ActivityDetailFasilitasOlahraga extends AppCompatActivity {
         textView4.setText("Kondisi : " + pojo_fasilitasOlahraga.getKondisi_prasarana());
         textView5.setText("Tahun dibangun : " + pojo_fasilitasOlahraga.getTahun_dibangun());
         textView6.setText("Luas : " + pojo_fasilitasOlahraga.getLuas() + " meter");
+
+        Button btnApply = findViewById(R.id.btn_apply);
+        btnApply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ActivityApply.class));
+            }
+        });
     }
 
     @Override

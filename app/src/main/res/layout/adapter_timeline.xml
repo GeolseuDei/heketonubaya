@@ -10,22 +10,39 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="5dp">
-        <TextView
-            android:id="@+id/tv_item_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lorem"
-            android:textSize="16sp"
-            android:textStyle="bold" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/user"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#FF000000"
+                android:layout_gravity="center"/>
             <TextView
-                android:id="@+id/tv_from"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:id="@+id/tv_penanggung_jawab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_instance"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="From Ossas"
+                android:text="Instance"
                 android:maxLines="1"
                 android:ellipsize="end"/>
             <TextView
@@ -35,6 +52,18 @@
                 android:text="01-01-2018"/>
         </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+    
+    <ImageView
+        android:layout_margin="3dp"
+        android:id="@+id/iv_timeline"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"/>
 
     <LinearLayout
         android:layout_width="match_parent"

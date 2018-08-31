@@ -5,22 +5,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class ActivityFaq extends AppCompatActivity {
+public class ActivityApply extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faq);
+        setContentView(R.layout.activity_apply);
 
-        //region Set Actionbar
         ActionBar supportActionBar = getSupportActionBar();
         if (supportActionBar != null) {
             supportActionBar.setHomeAsUpIndicator(R.drawable.ic_chevron_left_white_24dp);
             supportActionBar.setDisplayHomeAsUpEnabled(true);
         }
-        //endregion
-
-        setTitle("Frequent Asked Question");
+        setTitle("Apply");
     }
 
     @Override

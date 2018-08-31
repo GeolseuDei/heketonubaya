@@ -2,7 +2,7 @@ package com.example.heketonubaya;
 
 public class POJO_Timeline {
     private String id;
-    private String judul;
+    private String penanggung_jawab;
     private String keterangan;
     private String foto;
     private String tanggal;
@@ -12,6 +12,15 @@ public class POJO_Timeline {
     private String sekolah_id;
     private String wirausaha_id;
     private String status;
+    private String instance;
+
+    public String getInstance() {
+        return instance;
+    }
+
+    public void setInstance(String instance) {
+        this.instance = instance;
+    }
 
     public String getId() {
         return id;
@@ -21,12 +30,12 @@ public class POJO_Timeline {
         this.id = id;
     }
 
-    public String getJudul() {
-        return judul;
+    public String getPenanggung_jawab() {
+        return penanggung_jawab;
     }
 
-    public void setJudul(String judul) {
-        this.judul = judul;
+    public void setPenanggung_jawab(String penanggung_jawab) {
+        this.penanggung_jawab = penanggung_jawab;
     }
 
     public String getKeterangan() {

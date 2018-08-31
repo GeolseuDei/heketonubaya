@@ -59,9 +59,37 @@ public class FragmentTimeline extends Fragment {
     public void onResume() {
         super.onResume();
         pojo_timelines = new ArrayList<>();
-        for (int i = 0; i < 5; i++) {
-            pojo_timelines.add(new POJO_Timeline());
-        }
+        POJO_Timeline p1, p2, p3, p4;
+        p1 = new POJO_Timeline();
+        p2 = new POJO_Timeline();
+        p3 = new POJO_Timeline();
+        p4 = new POJO_Timeline();
+
+        p1.setPenanggung_jawab("John Doe");
+        p1.setInstance("Fasilitas Olahraga");
+        p1.setFoto("fasilitas_olahraga");
+        p1.setKeterangan("Dalam menyambut hari kemerdekaan RI Lapangan X memberikan diskon 70% bagi yang menggunakan fasilitas mulai tanggal 1 agustus - 31 agustus. Silahkan datang ke tempat kami di jl. XYZ");
+
+        p2.setPenanggung_jawab("John Doe");
+        p2.setInstance("Puskesmas");
+        p2.setFoto("puskesmas");
+        p2.setKeterangan("Puskesmas X akan tutup mulai tanggal 10 april 2018 hingga 20 april 2018 dikarenakan staff dan pekerja akan diikutsertakan dalam penanggulangan bencana gempa di wilayah X");
+
+        p3.setPenanggung_jawab("John Doe");
+        p3.setInstance("Cagar Budaya");
+        p3.setFoto("cagar_budaya");
+        p3.setKeterangan("Gratis masuk ke Cagar Budaya X mulai tanggal 10 mei 2018 - 30 mei 2018. Silahkan ajak teman, keluarga, dan kerabat anda mengunjungi Cagar Budaya X.");
+
+        p4.setPenanggung_jawab("John Doe");
+        p4.setInstance("Sekolah");
+        p4.setFoto("sekolah");
+        p4.setKeterangan("Sekolah X mengadakan bakti sosial untuk menyumbang korban bencana alam di daerah X. Bagi yang berminat menyumbang bisa menghubungi kontak yang ada di poster terima kasih.");
+
+        pojo_timelines.add(p1);
+        pojo_timelines.add(p2);
+        pojo_timelines.add(p3);
+        pojo_timelines.add(p4);
+
         recyclerView.setAdapter(new AdapterTimeline(pojo_timelines, getActivity()));
     }
 }

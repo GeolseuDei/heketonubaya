@@ -55,7 +55,7 @@ public class ActivityHistory extends AppCompatActivity {
             public void onClick(View view) {
                 setTitle("HISTORY");
                 ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.historyFrame, new FragmentPending());
+                ft.replace(R.id.historyFrame, new FragmentHistory());
                 ft.commit();
             }
         });

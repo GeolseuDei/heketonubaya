@@ -24,7 +24,7 @@
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cara untuk menghubungi kami?"
+                android:text="Cara Mengajukan Kerjasama Dengan Suatu Instansi?"
                 android:textColor="@color/black"
                 android:textSize="16sp"/>
             <LinearLayout
@@ -35,7 +35,7 @@
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Anda dapat menghubungi kami dengan fitur Contact Us (Profile - Contact Us) dan menceritakan kesalahan, saran, dan masukan tentang aplikasi ini untuk perkembangan kedepannya."/>
+                android:text="Untuk mengajukan kerjasama silahkan akses menu home. Kemudian pilih kategori instansi yang diinginkan. Setelah itu akan muncul list daftar instansi terkait yang dapat diajak kerjasama. Tekan tombol details lalu apply dan isi form yang telah disediakan. Selanjutnya tunggu instansi terkait menerima pengajuan kerjasama. Status pengajuan kerjasama dapat dilihat pada menu profile bagian history."/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cara untuk menghubungi kami?"
+                android:text="Cara Melihat Ajakan Kerjasama Yang Dikirim Instansi Lain"
                 android:textColor="@color/black"
                 android:textSize="16sp"/>
             <LinearLayout
@@ -61,34 +61,7 @@
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Anda dapat menghubungi kami dengan fitur Contact Us (Profile - Contact Us) dan menceritakan kesalahan, saran, dan masukan tentang aplikasi ini untuk perkembangan kedepannya."/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/borderlogin"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:orientation="vertical">
-            <TextView
-                android:padding="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cara untuk menghubungi kami?"
-                android:textColor="@color/black"
-                android:textSize="16sp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
-            <TextView
-                android:padding="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Anda dapat menghubungi kami dengan fitur Contact Us (Profile - Contact Us) dan menceritakan kesalahan, saran, dan masukan tentang aplikasi ini untuk perkembangan kedepannya."/>
+                android:text="Jika ada instansi yang mengajak kerjasama akan masuk ke menu request. Disana akan menampilkan siapa saja yang mengajak kerjasama dan kontennya apa. Anda bisa menerima maupun menolak tergantung keinginan anda sendiri. Untuk menolak suatu ajakan kerjasama harus disertai dengan alasan yang valid."/>
         </LinearLayout>
 
         <LinearLayout
@@ -104,7 +77,7 @@
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cara untuk menghubungi kami?"
+                android:text="Apa Itu Timeline?"
                 android:textColor="@color/black"
                 android:textSize="16sp"/>
             <LinearLayout
@@ -115,7 +88,7 @@
                 android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Anda dapat menghubungi kami dengan fitur Contact Us (Profile - Contact Us) dan menceritakan kesalahan, saran, dan masukan tentang aplikasi ini untuk perkembangan kedepannya."/>
+                android:text="Timeline merupakan salah satu fitur dari aplikasi kami dimana suatu instansi dapat memposting sesuatu seperti promosi jika ada acara dan lain sebagainya."/>
         </LinearLayout>
 
         <LinearLayout

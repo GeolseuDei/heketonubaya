@@ -33,16 +33,16 @@ public class FragmentPending extends Fragment {
         if (view == null) {
             view = inflater.inflate(R.layout.fragment_pending, container, false);
 
-            recyclerView = view.findViewById(R.id.rclKonten);
-            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-
-            strings = new ArrayList<>();
-
-            for (int i = 0; i < 5; i++) {
-                strings.add("");
-            }
-
-            recyclerView.setAdapter(new AdapterPending(strings, getActivity()));
+//            recyclerView = view.findViewById(R.id.rclKonten);
+//            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+//
+//            strings = new ArrayList<>();
+//
+//            for (int i = 0; i < 5; i++) {
+//                strings.add("");
+//            }
+//
+//            recyclerView.setAdapter(new AdapterPending(strings, getActivity()));
         }
         return view;
     }

@@ -8,16 +8,16 @@
     android:padding="20dp"
     android:orientation="vertical">
 
-    <!--<android.support.design.widget.TextInputLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
-        <!--<EditText-->
-            <!--android:id="@+id/et_title"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:hint="Title"-->
-            <!--android:inputType="textCapWords"/>-->
-    <!--</android.support.design.widget.TextInputLayout>-->
+    <android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <EditText
+    android:id="@+id/et_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Title"
+    android:inputType="textCapWords"/>
+    </android.support.design.widget.TextInputLayout>
 
     <EditText
         android:layout_marginTop="5dp"
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tap here to select photo to upload"/>
+            android:text="Tap here to upload proposal"/>
     </LinearLayout>
 
     <Button
@@ -52,7 +52,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="post"
-        android:background="@color/colorPrimary"
+        android:text="Apply"
+        android:background="@drawable/borderapply"
         android:textColor="@color/white"/>
 </LinearLayout>

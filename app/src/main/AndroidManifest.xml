@@ -3,7 +3,7 @@
     package="com.example.heketonubaya">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -63,7 +63,8 @@
             android:name=".ActivityDetailSekolah"
             android:label="@string/title_activity_detail_sekolah" />
         <activity android:name=".ActivityDetailCagarBudaya" />
-        <activity android:name=".ActivityDetailFasilitasOlahraga"></activity>
+        <activity android:name=".ActivityDetailFasilitasOlahraga" />
+        <activity android:name=".ActivityApply"></activity>
     </application>
 
 </manifest>

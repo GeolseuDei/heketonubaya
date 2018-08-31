@@ -5,6 +5,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -32,7 +36,27 @@ public class AdapterTimeline extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        TextView textView = holder.itemView.findViewById(R.id.tv_penanggung_jawab);
+        TextView textView1 = holder.itemView.findViewById(R.id.tv_instance);
+        TextView textView2 = holder.itemView.findViewById(R.id.tv_keterangan);
+        ImageView imageView = holder.itemView.findViewById(R.id.iv_timeline);
 
+        textView.setText(pojo_timelines.get(position).getPenanggung_jawab());
+        textView1.setText(pojo_timelines.get(position).getInstance());
+        textView2.setText(pojo_timelines.get(position).getKeterangan());
+
+        if(pojo_timelines.get(position).getFoto().equals("fasilitas_olahraga")) {
+            Glide.with(context).load(R.drawable.lapangan).into(imageView);
+        }
+        if(pojo_timelines.get(position).getFoto().equals("puskesmas")) {
+            Glide.with(context).load(R.drawable.fotopuskesmas).into(imageView);
+        }
+        if(pojo_timelines.get(position).getFoto().equals("cagar_budaya")) {
+            Glide.with(context).load(R.drawable.monumen).into(imageView);
+        }
+        if(pojo_timelines.get(position).getFoto().equals("sekolah")) {
+            Glide.with(context).load(R.drawable.fotosekolah).into(imageView);
+        }
     }
 
     @Override
