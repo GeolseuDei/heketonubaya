@@ -56,7 +56,7 @@ public class AdapterWirausaha extends RecyclerView.Adapter<RecyclerView.ViewHold
 //        });
 
         ImageView imageView = holder.itemView.findViewById(R.id.img_item_photo);
-        Glide.with(context).load(R.mipmap.ic_launcher).into(imageView);
+        Glide.with(context).load(R.drawable.fototoko).into(imageView);
 
         TextView textView = holder.itemView.findViewById(R.id.tv_nama);
         textView.setText(pojo_wirausaha.getNama_kupp());
@@ -72,7 +72,7 @@ public class AdapterWirausaha extends RecyclerView.Adapter<RecyclerView.ViewHold
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ActivityDetailWirausaha.class);
-                intent.putExtra("id", pojo_wirausaha.getId());
+                intent.putExtra("pojo_wirausaha", pojo_wirausaha);
                 context.startActivity(intent);
             }
         });

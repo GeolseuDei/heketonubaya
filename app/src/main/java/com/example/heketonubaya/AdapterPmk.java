@@ -62,15 +62,15 @@ public class AdapterPmk extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         textView1.setText(pojo_pmk.getAlamat());
         textView2.setText(pojo_pmk.getTelepon());
 
-        Glide.with(context).load(R.mipmap.ic_launcher).into(imageView);
+        Glide.with(context).load(R.drawable.fotopmk).into(imageView);
 
         Button button = holder.itemView.findViewById(R.id.btn_details);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
-                intent.putExtra("id", pojo_pmk.getId());
-                context.startActivity(intent);
+//                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
+//                intent.putExtra("id", pojo_pmk.getId());
+//                context.startActivity(intent);
             }
         });
         //endregion
