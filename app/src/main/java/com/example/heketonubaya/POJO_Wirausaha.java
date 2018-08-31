@@ -1,6 +1,9 @@
 package com.example.heketonubaya;
 
-public class POJO_Wirausaha {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class POJO_Wirausaha implements Parcelable {
     private String id;
     private String nama_kupp;
     private String penanggungjawab;
@@ -11,6 +14,53 @@ public class POJO_Wirausaha {
     private String jenis_usaha;
     private String nik;
     private String user_id;
+
+    public POJO_Wirausaha() {
+    }
+
+    protected POJO_Wirausaha(Parcel in) {
+        id = in.readString();
+        nama_kupp = in.readString();
+        penanggungjawab = in.readString();
+        jenis_kelamin = in.readString();
+        kecamatan = in.readString();
+        alamat = in.readString();
+        telepon = in.readString();
+        jenis_usaha = in.readString();
+        nik = in.readString();
+        user_id = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(id);
+        dest.writeString(nama_kupp);
+        dest.writeString(penanggungjawab);
+        dest.writeString(jenis_kelamin);
+        dest.writeString(kecamatan);
+        dest.writeString(alamat);
+        dest.writeString(telepon);
+        dest.writeString(jenis_usaha);
+        dest.writeString(nik);
+        dest.writeString(user_id);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<POJO_Wirausaha> CREATOR = new Creator<POJO_Wirausaha>() {
+        @Override
+        public POJO_Wirausaha createFromParcel(Parcel in) {
+            return new POJO_Wirausaha(in);
+        }
+
+        @Override
+        public POJO_Wirausaha[] newArray(int size) {
+            return new POJO_Wirausaha[size];
+        }
+    };
 
     public String getId() {
         return id;

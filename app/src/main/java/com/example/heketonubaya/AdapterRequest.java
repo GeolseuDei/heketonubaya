@@ -38,7 +38,15 @@ public class AdapterRequest extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        TextView textView = holder.itemView.findViewById(R.id.tv_item_name);
+        TextView textView1 = holder.itemView.findViewById(R.id.tv_from);
+        TextView textView2 = holder.itemView.findViewById(R.id.tv_tanggal);
+        TextView textView3 = holder.itemView.findViewById(R.id.tv_keterangan);
 
+        textView.setText(pojo_requests.get(position).getTitle());
+        textView1.setText("From: "+pojo_requests.get(position).getFrom());
+        textView2.setText(pojo_requests.get(position).getDate_req());
+        textView3.setText(pojo_requests.get(position).getContent());
     }
 
     @Override

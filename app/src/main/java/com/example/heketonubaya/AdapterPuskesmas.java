@@ -61,15 +61,15 @@ public class AdapterPuskesmas extends RecyclerView.Adapter<RecyclerView.ViewHold
 
         textView.setText(pojo_puskesmas.getNama_puskesmas());
         textView1.setText(pojo_puskesmas.getAlamat());
-        Glide.with(context).load(R.mipmap.ic_launcher).into(imageView);
+        Glide.with(context).load(R.drawable.fotopuskesmas).into(imageView);
 
         Button button = holder.itemView.findViewById(R.id.btn_details);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
-                intent.putExtra("id", pojo_puskesmas.getId());
-                context.startActivity(intent);
+//                Intent intent = new Intent(context, ActivityDetailWirausaha.class);
+//                intent.putExtra("id", pojo_puskesmas.getId());
+//                context.startActivity(intent);
             }
         });
 

@@ -6,7 +6,7 @@ public class Webservice {
         boolean hasil = true;
         if(hasil){
             pojo_user.setId("1");
-            pojo_user.setUsername("tes");
+            pojo_user.setUsername("AU TO WIN");
             return true;
         }else{
             return false;
