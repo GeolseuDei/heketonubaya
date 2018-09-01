@@ -1,8 +1,12 @@
 package com.example.heketonubaya;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,6 +19,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
+
+import static android.support.v4.app.ActivityOptionsCompat.makeSceneTransitionAnimation;
 
 public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -53,7 +59,7 @@ public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder
 //            }
 //        });
 
-        TextView textView = holder.itemView.findViewById(R.id.tv_nama);
+        final TextView textView = holder.itemView.findViewById(R.id.tv_nama);
         TextView textView1 = holder.itemView.findViewById(R.id.tv_alamat);
         TextView textView2 = holder.itemView.findViewById(R.id.tv_status);
 
@@ -61,16 +67,21 @@ public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder
         textView1.setText(pojo_sekolah.getAlamat());
         textView2.setText(pojo_sekolah.getStatus().equals("N") ? "Negeri" : "Swasta");
 
-        ImageView imageView = holder.itemView.findViewById(R.id.img_item_photo);
+        final ImageView imageView = holder.itemView.findViewById(R.id.img_item_photo);
         Glide.with(context).load(R.drawable.fotosekolah).into(imageView);
+        ViewCompat.setTransitionName(imageView, "image"+pojo_sekolah.getUser_id());
 
-        Button button = holder.itemView.findViewById(R.id.btn_details);
+        final Button button = holder.itemView.findViewById(R.id.btn_details);
+        button.setTransitionName("apply"+pojo_sekolah.getUser_id());
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ActivityDetailSekolah.class);
                 intent.putExtra("pojo_sekolah", pojo_sekolah);
-                context.startActivity(intent);
+                Pair<View, String> pair2 = Pair.create((View) imageView, imageView.getTransitionName());
+                Pair<View, String> pair3 = Pair.create((View) button, button.getTransitionName());
+                ActivityOptionsCompat options = makeSceneTransitionAnimation((Activity) context, pair2, pair3);
+                context.startActivity(intent, options.toBundle());
             }
         });
         //endregion
