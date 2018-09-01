@@ -67,7 +67,8 @@
         <activity android:name=".ActivityDetailFasilitasOlahraga" />
         <activity android:name=".ActivityApply" />
         <activity android:name=".ActivityReviewPendaftaran" />
-        <activity android:name=".ActivityDetailGambar"></activity>
+        <activity android:name=".ActivityDetailGambar"
+            android:theme="@style/noActionBar"></activity>
     </application>
 
 </manifest>
