@@ -34,7 +34,7 @@ public class FragmentRequest extends Fragment {
             view = inflater.inflate(R.layout.fragment_request, container, false);
 
             recyclerView = view.findViewById(R.id.rclKonten);
-            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         }
         return view;
     }

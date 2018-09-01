@@ -1,12 +1,16 @@
 package com.example.heketonubaya;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -62,7 +66,7 @@ public class AdapterRequest extends RecyclerView.Adapter<RecyclerView.ViewHolder
         btnTolak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                removeItem(position);
+                removeItem2(position);
             }
         });
 
@@ -79,6 +83,36 @@ public class AdapterRequest extends RecyclerView.Adapter<RecyclerView.ViewHolder
         pojo_requests.remove(position);
         notifyItemRemoved(position);
         notifyItemChanged(position, pojo_requests);
+    }
+
+    public void removeItem2(final int position) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Alasan : ");
+
+        final EditText input = new EditText(context);
+        input.setText("");
+        builder.setView(input);
+
+        builder.setPositiveButton("Tolak", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (!input.getText().toString().isEmpty()) {
+                    pojo_requests.remove(position);
+                    notifyItemRemoved(position);
+                    notifyItemChanged(position, pojo_requests);
+                } else {
+
+                }
+            }
+        });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        builder.show();
     }
 
     @Override

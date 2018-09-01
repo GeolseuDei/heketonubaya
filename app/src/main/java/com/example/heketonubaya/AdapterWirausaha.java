@@ -51,7 +51,7 @@ public class AdapterWirausaha extends RecyclerView.Adapter<RecyclerView.ViewHold
         final POJO_Wirausaha pojo_wirausaha = pojo_wirausahas.get(position);
 
         final ImageView imageView = holder.itemView.findViewById(R.id.img_item_photo);
-        Glide.with(context).load(R.drawable.fototoko).into(imageView);
+        Glide.with(context).load(R.drawable.fotowirausaha).into(imageView);
 
         final TextView textView = holder.itemView.findViewById(R.id.tv_nama);
         textView.setText(pojo_wirausaha.getNama_kupp());

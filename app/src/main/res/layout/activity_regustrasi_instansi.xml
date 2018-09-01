@@ -84,14 +84,18 @@
             android:layout_weight="2"
             android:text="Pilih Gambar"
             tools:layout_editor_absoluteX="288dp"
-            tools:layout_editor_absoluteY="455dp" />
+            tools:layout_editor_absoluteY="455dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="Simpan Pendaftaran" />
+            android:text="Simpan Pendaftaran"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

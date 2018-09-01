@@ -86,7 +86,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Alasan : "/>
+                        android:text="Alasan : Alat dalam pemeliharaan berkala"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -198,7 +198,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Alasan : "/>
+                        android:text="Alasan : Bertabrakan dengan kegiatan lain"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
