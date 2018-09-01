@@ -78,6 +78,7 @@ public class AdapterSekolah extends RecyclerView.Adapter<RecyclerView.ViewHolder
             public void onClick(View view) {
                 Intent intent = new Intent(context, ActivityDetailSekolah.class);
                 intent.putExtra("pojo_sekolah", pojo_sekolah);
+                intent.putExtra("transition", pojo_sekolah.getUser_id());
                 Pair<View, String> pair2 = Pair.create((View) imageView, imageView.getTransitionName());
                 Pair<View, String> pair3 = Pair.create((View) button, button.getTransitionName());
                 ActivityOptionsCompat options = makeSceneTransitionAnimation((Activity) context, pair2, pair3);
