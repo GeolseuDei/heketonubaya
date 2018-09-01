@@ -84,6 +84,8 @@ public class ActivityDetailSekolah extends AppCompatActivity implements OnMapRea
             }
         });
 
+        supportStartPostponedEnterTransition();
+
     }
 
     @Override
